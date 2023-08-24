@@ -72,7 +72,7 @@ body{
 
 .input{
   padding: 10px;
-  background-color: #280000;
+  background-color: transparent;
   background-clip: padding-box;
   border: 1px solid #7e786d;
   font-size: 18px;
@@ -220,7 +220,7 @@ body{
 
 .chat-area{
   padding: 10px;
-  background-color: #280000;
+  background-color: transparent;
   background-clip: padding-box;
   border: 1px solid #7e786d;
   font-size: 14px;
