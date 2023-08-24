@@ -67,3 +67,43 @@ body{
   min-height: 100%;
   background-color: #280000 ;
 }
+
+.input{
+  padding: 10px;
+  background-color: #280000;
+  border: none;
+  background-clip: padding-box;
+  border: 1px solid #7e786d;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 300;
+  color: #ebe9e5;
+  outline: 0;
+}
+
+.input::placeholder{
+  color: #7e786d;
+}
+
+.label{
+  display: block;
+}
+
+.form{
+  margin: 0 auto;
+  width: 60%;
+  
+  
+}
+
+.title{
+  text-align: center;
+}
+.form__wrapper{
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
