@@ -84,7 +84,7 @@ function chat(){
   chatInputMessage.value = '';
   let today = new Date();
   let userName = '';
-  let messages = 'Привет участникам чата! \---------------------------';
+  let messages = 'Привет участникам чата!';
   let inputMessage = '';
   let timeNow = '';
   chatForm.addEventListener('submit', function(event) { 
@@ -92,7 +92,7 @@ function chat(){
     timeNow = today.toLocaleTimeString('ru-RU');
     userName = chatInputName.value;
     if (userName == ''){
-      chatMessage.innerHTML = 'Введите ваше имя.';
+      chatMessage.innerHTML = 'Для продолжения введите ваше имя!!!';
     } else {
       inputMessage = chatInputMessage.value;
       messages = messages + '\n' + userName + ': '+ inputMessage + '\n' + timeNow;

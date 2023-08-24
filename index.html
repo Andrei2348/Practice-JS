@@ -9,47 +9,62 @@
 <body>
   <div class="wrapper">
     <div class="container">
+
       <section class="welcome">
         <h2 class="welcome__title title">Привет, как Вас зовут?</h2>
         <div class="form__wrapper">
-
-          <form id="welcome__form" class="form">
+          <form id="welcome__form" class="welcome__form form">
             <label class="label" for="welcome__input">Введите ваше имя</label>
             <input class="welcome__input input" id="welcome__input" type="text" placeholder="Введите ваше имя">
-            <input class="welcome__button" type="submit" value="Отправить">
+            <input class="welcome__button button" type="submit" value="Отправить">
           </form>
+          <div class="welcome__message message__wrapper">
+            <p id="welcome__message"></p>
+          </div>
         </div>
-        <p id="welcome__message"></p>
       </section>
 
       <section class="calculator">
         <h2 class="calculator__title  title">Калькулятор индекса массы тела</h2>
-        <form id="calculator__form" class="form">
-           <label class="label" for="calculator__input-massa">Введите массу (кг)</label>
-          <input class="calculator__input input" id="calculator__input-massa" type="text" placeholder="Введите массу, кг">
-          
-          <label class="label" for="calculator__input-height">Введите рост (см)</label>
-          <input class="calculator__input input" id="calculator__input-height" type="text" placeholder="Введите рост, см">
-          
-          <input class="calculator__button" type="submit" value="Рассчитать индекс">
-        </form>
-        <p id="calculator__message-result"></p>
-        <p id="calculator__message-status"></p>
+        <div class="calculator__form-wrapper form__wrapper">
+          <form id="calculator__form" class="calculator__form form">
+            <div class="calculator__form-inner">
+              <label class="label" for="calculator__input-massa">Введите массу (кг)</label>
+              <input class="calculator__input input" id="calculator__input-massa" type="text" placeholder="Введите массу, кг">
+            </div>
+            <div class="calculator__form-inner">
+              <label class="label" for="calculator__input-height">Введите рост (см)</label>
+              <div class="calculator__second-form">
+                <input class="calculator__input input" id="calculator__input-height" type="text" placeholder="Введите рост, см">
+                <input class="calculator__button button" type="submit" value="Рассчитать индекс">
+              </div>
+            </div>
+          </form>
+          <div class="calculator__message message__wrapper">
+            <p id="calculator__message-result"></p>
+            <p id="calculator__message-status"></p>
+          </div>
+        </div>
       </section>
 
       <section class="chat">
         <h2 class="chat__title  title">Прототип чата</h2>
-        <form id="chat__form" class="form">
-          <label class="label" for="chat__input-name">Введите ваше имя</label>
-          <input class="chat__input input" id="chat__input-name" type="text" placeholder="Введите ваше имя">
-          <p id="chat__message"></p>
-          <textarea id="chat__area" cols="30" rows="10"></textarea>
-          <label class="label" for="chat__input-message">Введите сообщение</label>
-          <input class="chat__input input" id="chat__input-message" type="text" placeholder="Введите сообщение">
-          <input class="chat__button" type="submit" value="Отправить сообщение">
-        </form>
+        <div class="chat__form-wrapper form__wrapper">
+          <div class="chat__message message__wrapper">
+            <p id="chat__message"></p>
+          </div>
+          <form id="chat__form" class="chat__form form">
+            <label class="label" for="chat__input-name">Введите ваше имя</label>
+            <input class="chat__input input" id="chat__input-name" type="text" placeholder="Введите ваше имя">
+            <textarea class="chat-area" id="chat__area" cols="70" rows="20" readonly></textarea>
+            <label class="label" for="chat__input-message">Введите сообщение</label>
+            <div class="chat__form-inner">
+              <input class="chat__input input" id="chat__input-message" type="text" placeholder="Введите сообщение">
+              <input class="chat__button button" type="submit" value="Отправить сообщение">
+            </div>
+          </form>
+        </div>
       </section>
-
     </div>
   </div>
   <script src="js/main.js"></script>
