@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <section class="welcome">
+        <h2 class="welcome__title">Привет, как Вас зовут?</h2>
+        <form id="welcome__form">
+          <label for="welcome__input">Введите ваше имя</label>
+          <input class="welcome__input input" id="welcome__input" type="text" placeholder="Введите ваше имя">
+          <input class="welcome__button" type="submit" value="Отправить">
+        </form>
+        <p id="welcome__message"></p>
+      </section>
+
+      <section class="chat">
+        <h2 class="chat__title">Прототип чата</h2>
+        <form id="chat__form">
+          <textarea id="chat__area" cols="30" rows="10"></textarea>
+           <label for="chat__input-message">Введите сообщение</label>
+          <input class="chat__input input" id="chat__input-message" type="text" placeholder="Введите сообщение">
+          <input class="chat__button" type="submit" value="Отправить сообщение">
+        </form>
+      </section>
+
+      <section class="calculator">
+        <h2 class="calculator__title">Калькулятор индекса массы тела</h2>
+        <form id="calculator__form">
+           <label for="calculator__input-massa">Введите массу (кг)</label>
+          <input class="calculator__input input" id="calculator__input-massa" type="text" placeholder="Введите массу, кг">
+          
+          <label for="calculator__input-height">Введите рост (см)</label>
+          <input class="calculator__input input" id="calculator__input-height" type="text" placeholder="Введите рост, см">
+          
+          <input class="calculator__button" type="submit" value="Рассчитать индекс">
+        </form>
+        <p id="calculator__message-result"></p>
+        <p id="calculator__message-status"></p>
+      </section>
+
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

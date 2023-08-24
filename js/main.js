@@ -1,0 +1,91 @@
+const welcomeForm = document.getElementById('welcome__form');
+const welcomeInput = document.getElementById('welcome__input');
+const welcomeMessage = document.getElementById('welcome__message');
+const calcForm = document.getElementById('calculator__form');
+const calcInputMassa = document.getElementById('calculator__input-massa');
+const calcInputHeight = document.getElementById('calculator__input-height');
+const calcMessageResult = document.getElementById('calculator__message-result');
+const calcMessageStatus = document.getElementById('calculator__message-status');
+const chatForm = document.getElementById('chat__form');
+const chatArea = document.getElementById('chat__area');
+const chatInputMessage = document.getElementById('chat__input-message');
+
+function welcome(){
+  welcomeForm.addEventListener('submit', function(event) { 
+    event.preventDefault(); 
+    let message = '';
+    if (welcomeInput.value == ''){
+      message = 'Нужно ввести имя';
+    } else {
+      message = `Привет ${welcomeInput.value}!!!`;
+    };
+    console.log(message);
+    welcomeMessage.innerHTML = message;
+  });
+};
+
+welcome();
+
+
+function calculatorOfIndex(){
+  calcForm.addEventListener('submit', function(event) { 
+    event.preventDefault(); 
+      let massa = 0
+      let height = 0
+      let message = ''
+      let messageResult = '';
+      let messageStatus = '';
+      massa = parseFloat(calcInputMassa.value)
+      height = (parseFloat(calcInputHeight.value) / 100)
+      let index = (massa /(height ** 2)).toFixed(2);
+      if(index < 16){
+        message = 'Выраженный дефицит массы тела'
+      }
+      if((index >= 16) && (index < 18,5)){
+        message = 'Недостаточная (дефицит) масса тела'
+      }
+      if((index >= 18.5) && (index < 25)){
+        message = 'Норма'
+      }
+      if(index >= 25 && index < 30){
+        message = 'Избыточная масса тела (предожирение)'
+      }
+      if(index >= 30 && index < 35){
+        message = 'Ожирение первой степени'
+      }
+      if(index >= 35 && index < 40){
+        message = 'Ожирение второй степени'
+      }
+      if(index >= 40){
+        message = 'Ожирение третьей степени (морбидное)'
+      }
+      if ((isNaN(index) == false) && (massa > 0) && (height > 0)){
+        messageResult = `Индекс вашего тела равен: ${index}`;
+        messageStatus = `Соответствие между массой человека и его ростом: ${message}`
+      } else {
+        messageResult = 'Ошибка ввода данных';
+        messageStatus = 'Проверьте введенные данные';
+      }
+      calcMessageResult.innerHTML = messageResult;
+      calcMessageStatus.innerHTML = messageStatus;
+      console.log(messageResult);
+      console.log(messageStatus);
+    })
+}
+
+
+welcome();
+calculatorOfIndex();
+
+chatArea.value = '';
+chatForm.addEventListener('submit', function(event) { 
+  event.preventDefault();
+  messages = chatArea.value;
+  inputMessage = chatInputMessage.value;
+  console.log(messages);
+  console.log(inputMessage);
+  messages = messages  + inputMessage + '\n';
+  console.log(messages);
+  chatArea.value = messages;
+  chatInputMessage.value = '';
+})
